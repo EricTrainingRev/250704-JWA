@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actions API Example</title>
+</head>
+<body>
+    <h1 id="sliderValue"></h1>
+    <input type="range" min="0" max="10" id="slider">
+</body>
+<script>
+
+    const header = document.getElementById("sliderValue");
+    const slider = document.getElementById("slider");
+    slider.addEventListener("input",()=>{
+        header.textContent = slider.value;
+    })
+
+</script>
+</html>

@@ -52,6 +52,17 @@
         "//p[1]" then a collection of 2 p elements will be returned, since there are 2 elements
         within the first div container
     -->
+
+    <!-- 
+        we can further refine our XPath query by making use of some XPath functions: in our
+        case, if we want to get the p element that contains the text "second div" we can use
+        the text function to specify we want the p element that has the text content we are 
+        looking for, which looks like this: "//p[text(),'second div']". This allows us to
+        avoid needing to figure out what div contains the p element we want, because we have
+        refined the query enough that the browser knows how to locate the element we want.
+        The study guide has a link to a cheat sheet with a multitude of options you can use
+        for crafting XPath queries
+    -->
     <div id="div1">
         <p>some text</p>
         <p>some more text</p>
