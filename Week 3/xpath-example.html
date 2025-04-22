@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPath Example</title>
+    <style>
+        #div1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Xpath is a locator strategy that treats the DOM like a file system: elements can
+        contain other elements in the same way directories can contain other files/directories
+
+        Similar to a file system, absolute and relative XPath can be written to reference
+        elements in the DOM
+    -->
+    <!--
+        Absolute XPath to target the h1 element: "/html/body/h1"
+
+        Similar to how absolute path in a file system starts at the root of the storage
+        system, absolute XPath starts at the root of the page, which is the document (represent
+        by the initial single forward slash "/"). Then you go element by element until you
+        reach the one you are targeting, going down one child element at a time
+    -->
+    <h1>XPath Example Page</h1>
+
+    <!-- 
+        When there is more than one valid target for your XPath you have to specify which
+        element you want to target, unless you want to return a collection of elements. XPath
+        indexing starts at 1, so if you want the first div using absolute XPath you would write
+        "/html/body/div[1]". If you leave off the index then you get a list of web elements
+        returned
+
+        Anytime you have elements you need to interact with at the same level of the document
+        (think inside the same directory, share the same direct parent element) then relative
+        XPath can sometimes locate your element for you in a more concise way. If I wanted
+        to access the first div below, I could simplify the XPath query to "//div[1]". This
+        tells the tool I am using XPath with "within the current node (element), return the
+        first div element"
+    -->
+
+    <!-- 
+        When your relative xpath returns elements that are children of separate parent elements
+        the index accessor changes behavior: instead of returning the element at the specific
+        index the collection of elements is returned based upon which container is mapped to
+        the index number. For example, if the Xpath is "//p" a collection of 4 paragraph elements
+        will be returned, since there are 4 total p elements in the page. If we adjust to
+        "//p[1]" then a collection of 2 p elements will be returned, since there are 2 elements
+        within the first div container
+    -->
+    <div id="div1">
+        <p>some text</p>
+        <p>some more text</p>
+    </div>
+    <div id="div2">
+        <p>second div</p>
+        <p>more content</p>
+    </div>
+</body>
+</html>
