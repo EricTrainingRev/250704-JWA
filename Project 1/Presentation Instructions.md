@@ -9,3 +9,9 @@
     - Explain what processes you want to improve upon in the next sprint
     - Explain what new processes/practices you plan on incorporating in the next Sprint
 5. Field questions
+
+# General Notes
+- Presentations should be no more than 5 minutes
+- Make sure to do a few practice runs of your presentation
+- Generate your final System Test Report before the presentation (ideally the day before)
+- Write down what you want to say before the presentation
