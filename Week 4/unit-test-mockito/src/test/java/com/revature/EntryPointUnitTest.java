@@ -27,6 +27,11 @@ public class EntryPointUnitTest {
             are possible within our entryPoint object without ever directly calling real methods from
             the isEven object. This means only the code of the entryPoint object is actually being run,
             so we achieve unit testing because no actual isEven code is ever executed
+
+            Something to keep in mind is that Mockito tracks method calls, arguments used, and stubbing
+            instructions for mock objects, and these instructions persist between tests. In order to prevent
+            unintended actions and results from your mock objects it is best practice to reset your mock
+            resources between every test (hence the @Before usage instead of a single @BeforeClass)
          */
         isEven = Mockito.mock(IsEven.class);
         entryPoint = new EntryPoint(isEven);
