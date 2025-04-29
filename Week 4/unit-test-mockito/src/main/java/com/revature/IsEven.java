@@ -6,4 +6,8 @@ public class IsEven {
         return num % 2;
     }
 
+    public int forExceptionTesting(){
+        return 10/2;
+    }
+
 }

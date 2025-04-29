@@ -16,4 +16,8 @@ public class EntryPoint {
         }
     }
 
+    public int callIsEvenMethodForException(){
+        return isEven.forExceptionTesting();
+    }
+
 }

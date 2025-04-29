@@ -57,4 +57,33 @@ public class EntryPointUnitTest {
         Assert.assertEquals("Odd", result);
     }
 
+    @Test
+    public void testCalculateIsActuallyCalled(){
+        /*
+            Mockito gives you the ability to "verify" that methods are called with specific arguments.
+            This is particularly useful for various kinds of Acceptance testing, such as regulatory
+            testing, where you need to validate to an auditor that your checks/protections are actually
+            being utilized within your code
+         */
+        Mockito.when(isEven.calculate(9)).thenReturn(1);
+        entryPoint.checkIfNumberIsEven(9);
+        /*
+            The code below tells Mockito to verify the mock object isEven called the method
+            calculate with the argument 9 one time. If we wanted to change the number of acceptable
+            invocations of the method we could change the VerificationMode
+         */
+        Mockito.verify(isEven, Mockito.atLeastOnce()).calculate(9);
+    }
+
+    @Test
+    public void mockExceptions(){
+        /*
+            The setup to stub an exception being thrown is the same as stubbing a return value, but
+            instead of using the thenReturn method you use the thenThrow method. Keep in mind you have to
+            provide the actual exception object that needs to be thrown
+         */
+        Mockito.when(isEven.forExceptionTesting()).thenThrow(new ArithmeticException("stubbing this exception"));
+        Assert.assertThrows(ArithmeticException.class, ()-> entryPoint.callIsEvenMethodForException());
+    }
+
 }
