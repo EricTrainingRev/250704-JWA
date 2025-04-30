@@ -50,7 +50,7 @@ public class CreateUserNegativeTest {
     }
 
     @Test
-    public void createUserNegativeTest(){
+    public void createUserRepoNegativeTest(){
         SQLException result = Assert.assertThrows(SQLException.class, ()-> userDao.createUser(negativeUser));
         Assert.assertTrue(result.getMessage().contains(constraint));
     }
