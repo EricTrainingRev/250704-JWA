@@ -1,5 +1,5 @@
 # API Requirements
-This document contains the endpoint data that needs to be tested for the Planetarium API. The jsons provided are templates showing the structure of the expected request and response bodies. Hard coded responses are provided where applicable, otherwise placeholder values are used
+This document contains the endpoint data that needs to be tested via integration testing for the Planetarium API. The jsons provided are templates showing the structure of the expected request and response bodies. Hard coded responses are provided where applicable, otherwise placeholder values are used
 
 ## User Endpoints
 ### Login
