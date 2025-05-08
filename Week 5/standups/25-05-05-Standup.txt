@@ -1,0 +1,44 @@
+Tema Green Standup
+
+Armando
+Studying for QC, and returning now to project work today
+So far not a huge challenge, just navigating Jira
+no blockers
+
+Joshua
+QC study since last standup
+assigned self a service layer task (working from a Trello board?) should be done today
+
+Nateil
+QC study, now on to project work
+Assigned self task
+so far not too challenging, getting team in alignment
+
+Preston
+Since last time doing QC prep and finishing up knowB4s. Have a service layer task, got stuck for a bit
+blocker: the way we implemented jira, we added criteria and I may have misread. Trying to get service layer to throw a SQL exception, but that was wrong. 
+
+
+
+
+
+
+Albert - working on user entity
+Was working on repo layer testing
+now onto service layer, then after that looking at API testing
+blockers:  none
+
+
+Chance
+testing the moon entity
+was working on repo, now onto service
+had a blocker, but has been resolved.
+No blockers
+
+
+Jyoti - 
+service layer and repo layers testing complete
+working on API testing
+no blockers
+
+

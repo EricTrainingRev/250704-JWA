@@ -1,0 +1,36 @@
+
+Albert - Team Skyhopper
+Working on service layer, taking time
+next moving on to API testing
+no blockers
+
+Armando - Team Green
+since last standup finished writing tests for user auth and moon retrival
+later go over how I implemented the retrival and look at dao/service implementation - requirements differ from the test
+blockers: none
+
+Chance - Skyhopper
+since last standup have bgeen writing tests in service layer
+finishing today, then onto API testing
+no blockers
+
+Joshua - Green
+finishing up moon service layer should be done today
+No blockers
+
+Jyoti - Skyhopper
+Working on API testing - rest-assured
+working on registration tests using API testing
+no blockers
+
+
+Netiel - Green
+Completed service testing
+taking assignment next after reviewing with the team
+no blockers
+
+Preston - Green
+since yesterday I completed knowB4s, QC tests, planet deletion testing, submitted for review - no problems but did find one failed test, made note of this
+now working on planet creation
+no blockers
+
