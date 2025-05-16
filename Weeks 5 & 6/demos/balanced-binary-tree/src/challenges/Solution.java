@@ -17,6 +17,13 @@ class Solution {
          * I must have misunderstood the problem.
          */
 
+        TreeNode node = root;
+
+        System.out.println("Node: " + node.val);
+        if(node.left != null) System.out.println("Left child: " + node.left.val);
+        if(node.right != null) System.out.println("Left child: " + node.right.val);
+
+
 
         if(root == null) return true;
 
@@ -34,16 +41,16 @@ class Solution {
     }
 
     void depthSearch(Set<Integer> depthSet, TreeNode node, int depth) {
+        if(node.left == null && node.right == null) {
+            depthSet.add(depth);
+        }
+
         if(node.left != null) {
             depthSearch(depthSet, node.left, depth + 1);
-        } else {
-            depthSet.add(depth);
         }
 
         if(node.right != null) {
             depthSearch(depthSet, node.right, depth + 1);
-        } else {
-            depthSet.add(depth);
         }
     }
 }

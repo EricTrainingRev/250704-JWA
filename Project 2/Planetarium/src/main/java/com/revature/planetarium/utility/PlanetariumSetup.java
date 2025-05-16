@@ -25,15 +25,19 @@ import io.javalin.Javalin;
 
 public class PlanetariumSetup {
 
-    final public static UserDao userDao = new UserDaoImp();
-    final public static UserService userService = new UserServiceImp(userDao);
-    final public static UserController userController = new UserController(userService);
+    private PlanetariumSetup() {
 
-    final public static PlanetDao planetDao = new PlanetDaoImp();
-    final public static PlanetService planetService = new PlanetServiceImp(planetDao);
-    final public static PlanetController planetController = new PlanetController(planetService);
+    }
 
-    final public static MoonDao moonDao = new MoonDaoImp();
+    public static final UserDao userDao = new UserDaoImp();
+    public static final UserService userService = new UserServiceImp(userDao);
+    public static final UserController userController = new UserController(userService);
+
+    public static final PlanetDao planetDao = new PlanetDaoImp();
+    public static final PlanetService planetService = new PlanetServiceImp(planetDao);
+    public static final PlanetController planetController = new PlanetController(planetService);
+
+    public static final MoonDao moonDao = new MoonDaoImp();
     final public static MoonService moonService = new MoonServiceImp(moonDao);
     final public static MoonController moonController = new MoonController(moonService);
 
@@ -48,7 +52,7 @@ public class PlanetariumSetup {
          * Mapping Testing reset route
          */
         if(AppConfig.ENVIRONMENT != null && AppConfig.ENVIRONMENT.equals("test")){
-            app.post("/reset",(ctx)->{Utility.resetTestDatabase();});
+            app.post("/reset", (ctx)->{Utility.resetTestDatabase();});
         }
 
 
